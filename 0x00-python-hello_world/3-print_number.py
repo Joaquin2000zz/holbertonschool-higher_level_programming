@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = "{1:.0f} percent of a {0}!"
-print(number.format("Batery street", 98))
+number = 98
+print("{} Batery street".format(number))
