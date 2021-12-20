@@ -11,6 +11,8 @@ int check_cycle(listint_t *list)
 	{
 		prev = prev->next;
 		ahead = ahead->next->next;
+		if (!ahead)
+			return (0);
 		if (ahead == prev)
 			return (1);
 	}
