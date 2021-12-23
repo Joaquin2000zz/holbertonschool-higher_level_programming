@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
-    import sys
+    from sys import exit, argv
 
-if len(sys.argv) != 4:
+if len(argv) != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    sys.exit(1)
+    exit(1)
 else:
-    if sys.argv[2] == '+':
-        res = add(int(sys.argv[1]), int(sys.argv[3]))
-    elif sys.argv[2] == '-':
-        res = sub(int(sys.argv[1]), int(sys.argv[3]))
-    elif sys.argv[2] == '/':
-        res = div(int(sys.argv[1]), int(sys.argv[3]))
-    elif sys.argv[2] == '*':
-        res = mul(int(sys.argv[1]), int(sys.argv[3]))
+    if argv[2] == '+':
+        res = add(int(argv[1]), int(argv[3]))
+    elif argv[2] == '-':
+        res = sub(int(argv[1]), int(argv[3]))
+    elif argv[2] == '/':
+        res = div(int(argv[1]), int(argv[3]))
+    elif argv[2] == '*':
+        res = mul(int(argv[1]), int(argv[3]))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
+        exit(1)
     print("{:d}".format(res))
