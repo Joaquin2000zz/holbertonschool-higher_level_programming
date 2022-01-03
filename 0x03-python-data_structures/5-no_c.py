@@ -1,4 +1,4 @@
-#!/usr/bin/pytho3
+#!/usr/bin/python3
 def no_c(my_string):
     if my_string:
         ret = ''
