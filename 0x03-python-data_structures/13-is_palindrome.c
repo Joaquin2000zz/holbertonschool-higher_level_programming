@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 
 	if (!head)
 		return (0);
-	if (!*head || !*head->next)
+	if (!*head || (*head)->next == NULL)
 		return (1);
 	reflection = malloc(sizeof(listint_t));
 	if (!reflection)
