@@ -8,6 +8,5 @@ def best_score(a_dictionary):
     for i in val_list:
         if i > j:
             j = i
-    print("sali del if al final d iteracion con val list {}".format(j))
     r = key_list[val_list.index(j)]
     return r
