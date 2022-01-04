@@ -33,7 +33,6 @@ int is_palindrome(listint_t **head)
 			current = current->next, reflection = reflection->next;
 		else
 		{
-				free_listint(reflection);
 				return (0);
 		}
 	}
