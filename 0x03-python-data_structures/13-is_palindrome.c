@@ -30,7 +30,7 @@ int is_palindrome(listint_t **head)
 	{
 		if (reflection->n == current->n)
 		{
-			freelistint(reflection);
+			free_listint(reflection);
 			return (1);
 		}
 		current = current->next, reflection = reflection->next;
