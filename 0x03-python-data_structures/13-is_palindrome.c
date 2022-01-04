@@ -29,7 +29,7 @@ int is_palindrome(listint_t **head)
 	current = *(head);
 	while (current)
 	{
-		if (reflection->n == current->n || reflection->next->n == current->next->n)
+		if (reflection->n == current->n)
 		{
 				free_listint(reflection);
 				return (1);
