@@ -30,13 +30,15 @@ int is_palindrome(listint_t **head)
 	while (current)
 	{
 		if (reflection->n == current->n)
+			current = current->next, reflection = reflection->next;
+		else
 		{
 				free_listint(reflection);
-				return (1);
+				return (0);
 		}
-		current = current->next, reflection = reflection->next;
 	}
-	return (0);
+	free_listint(reflection);
+	return (1);
 }
 
 /**
