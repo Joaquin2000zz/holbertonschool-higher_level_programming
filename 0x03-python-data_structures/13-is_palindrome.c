@@ -20,7 +20,7 @@ int is_palindrome(listint_t **head)
 	if (!reflection)
 	{
 		free(reflection);
-		return (0);
+		return (-1);
 	}
 	current = *head;
 	while (current->next)
