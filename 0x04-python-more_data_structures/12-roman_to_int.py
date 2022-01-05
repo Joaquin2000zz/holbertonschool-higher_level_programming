@@ -15,8 +15,11 @@ def roman_to_int(roman_string):
         for n, k in num.items():
             if roman_string[c] == n:
                 prev = k
-                if i < 0:
+                if c > 0 and num[roman_string[c - 1]] < num[roman_string[c]]:
+                    i -= num[roman_string[c]]
+                    if i < 0:
                         i *= -1
                 else:
                     i += k
+
     return i
