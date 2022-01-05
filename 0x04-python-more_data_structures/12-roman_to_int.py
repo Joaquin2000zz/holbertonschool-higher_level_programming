@@ -10,6 +10,8 @@ def roman_to_int(roman_string):
            'V': 5,
            'I': 1}
     for c in range(0, len(roman_string)):
+        if roman_string[c] not in num:
+            return 0
         for n, k in num.items():
             if roman_string[c] == n:
                 prev = k
@@ -17,6 +19,4 @@ def roman_to_int(roman_string):
                         i *= -1
                 else:
                     i += k
-            elif c < 1 - len(roman_string) and not num[roman_string[c + 1]]:
-                return 0
     return i
