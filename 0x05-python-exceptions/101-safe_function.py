@@ -9,5 +9,5 @@ def safe_function(fct, *args):
         ret = fct(args[0], args[1])
     except Exception as er:
         stderr.write("Exception: {}\n".format(er))
-        return None
+        ret = None
     return ret
