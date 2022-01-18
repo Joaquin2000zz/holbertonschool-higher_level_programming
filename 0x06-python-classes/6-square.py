@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 class Square:
 
+    """defining class square"""
+
     def checker(self, x, y):
+        """checker function which check if you can init the values"""
         if y is tuple:
             if len(y) != 2:
                 raise TypeError("the tuple length must be 2")
@@ -15,30 +18,37 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def __init__(self, size=0, position=(0, 0)):
+        """function which init the class variables"""
         self.checker(size, position)
         self.__position = position
         self.__size = size
 
     @property
     def size(self):
+        """function which return the value of size"""
         return self.__size
 
     @size.setter
     def size(self, n):
+        """function which set the size"""
         self.checker(n, None)
 
     @property
     def position(self):
+        """function which return the value of position"""
         return self.__position
 
     @position.setter
     def position(self, x):
+        """function which set the position"""
         self.checker(None, x)
 
     def area(self):
+        """function which calculate the area with size"""
         return self.__size * self.__size
 
     def my_print(self):
+        """function which print a square"""
         if (self.size == 0):
             print()
         else:
