@@ -70,4 +70,4 @@ class Square:
 
     def __str__(self):
         """method which return something printable"""
-        return f'self.my_print()'
+        return f'{self.my_print()}'
