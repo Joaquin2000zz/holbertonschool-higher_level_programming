@@ -11,7 +11,8 @@ class Square:
         """checker function which check if you can init the values"""
         if y is tuple:
             if len(y) != 2:
-                raise TypeError("the tuple length must be 2")
+                raise TypeError("position must be a tuple \
+                                of 2 positive integers")
             if y[0] is not int or y[1] is not int:
                 raise TypeError("position must be a tuple \
                                 of 2 positive integers")
