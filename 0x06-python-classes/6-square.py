@@ -13,9 +13,11 @@ class Square:
             if len(y) != 2:
                 raise TypeError("the tuple length must be 2")
             if y[0] is not int or y[1] is not int:
-                raise ValueError("size must be >= 0")
+                raise TypeError("position must be a tuple \
+                                of 2 positive integers")
             if y[0] < 0 or y[1] < 0:
-                raise ValueError("size must be >= 0")
+                raise TypeError("position must be a tuple \
+                                of 2 positive integers")
         if type(x) is not int:
             raise TypeError("size must be an integer")
         elif x < 0:
