@@ -9,7 +9,7 @@ class Square:
 
     def checker(self, x, y):
         """checker function which check if you can init the values"""
-        if not y[1]:
+        if (y[1] == '' and y[0]) or (y[0] == '' and y[1]):
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(y[0]) is not int or type(y[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
