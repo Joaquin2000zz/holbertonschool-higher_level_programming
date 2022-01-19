@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import math
+
 """10. ByteCode -> Python #5"""
 
 
