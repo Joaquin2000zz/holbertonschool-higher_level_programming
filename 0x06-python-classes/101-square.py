@@ -55,7 +55,7 @@ class Square:
     def my_print(self):
         """function which print a square"""
         if (self.size == 0):
-            print()
+            return chr(10)
         else:
             if self.__position[1] > 0:
                 for i in range(0, self.__position[1]):
@@ -66,7 +66,9 @@ class Square:
                         print(" ", end='')
                 for j in range(0, self.__size):
                     print("#", end='')
-                print()
+                if i != self.__size - 1:
+                    print()
+        return ''
 
     def __str__(self):
         """method which return something printable"""
