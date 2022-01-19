@@ -15,7 +15,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(y) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(y):
+        if y[0] == '' or y[1] == '':
             raise TypeError("position must be a tuple of 2 positive integers")
         if y[0] < 0 or y[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
