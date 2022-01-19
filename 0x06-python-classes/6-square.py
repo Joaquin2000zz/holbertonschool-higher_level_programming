@@ -11,18 +11,22 @@ class Square:
         """checker function which check if you can init the values"""
         try:
             if type(y[0]) is not int or type(y[1]) is not int:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple \
+                                of 2 positive integers")
             if type(y) is not tuple:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of \
+                                2 positive integers")
             if len(y) != 2:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of \
+                                2 positive integers")
             if y[0] < 0 or y[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of 2 \
+                                positive integers")
             if type(x) is not int:
                 raise TypeError("size must be an integer")
             elif x < 0:
                 raise ValueError("size must be >= 0")
-        except:
+        except Exception:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def __init__(self, size=0, position=(0, 0)):
