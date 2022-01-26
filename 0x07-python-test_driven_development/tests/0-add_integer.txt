@@ -1,0 +1,32 @@
+add function returning a + b
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer(2, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+    >>> add_integer(1, 1)
+    2
+    >>> add_integer(-10, 20)
+    10
+    >>> add_integer(-30, 10)
+    -20
+    >>> add_integer('a', 666)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer(666, "adasdasb")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_integer(6.5, 10)
+    16
+    >>> add_integer(10, 6.5)
+    16
