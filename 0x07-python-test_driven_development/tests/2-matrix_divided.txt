@@ -17,3 +17,7 @@ test 2:
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided(matrix, "hola"))
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
