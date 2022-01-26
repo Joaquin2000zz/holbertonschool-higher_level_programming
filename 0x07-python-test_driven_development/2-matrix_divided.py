@@ -33,7 +33,7 @@ def matrix_divided(matrix, div):
             if type(matrix[row][value]) is not int:
                 if type(matrix[row][value]) is not float:
                     raise TypeError("matrix must be a matrix (list of lists\
-                                    ) of integers/floats")
+) of integers/floats")
 
             valueAppend = matrix[row][value] / div
             if type(valueAppend) is float:
