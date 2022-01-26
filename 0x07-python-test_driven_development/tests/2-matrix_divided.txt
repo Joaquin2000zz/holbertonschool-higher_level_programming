@@ -21,3 +21,7 @@ test 2:
     Traceback (most recent call last):
         ...
     TypeError: div must be a number
+    >>> print(matrix_divided(matrix, 0.0))
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
