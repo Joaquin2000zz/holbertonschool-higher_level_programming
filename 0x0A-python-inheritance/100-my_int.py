@@ -3,6 +3,7 @@
 100-my_int module
 """
 
+
 class MyInt(int):
     """
     MyInt is a rebel. MyInt has == and != operators inverted
