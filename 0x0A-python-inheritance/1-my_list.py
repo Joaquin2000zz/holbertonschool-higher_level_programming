@@ -14,5 +14,5 @@ class MyList(list):
         """
         for item in self:
             if type(item) is not int:
-                raise TypeError("Must be a list of integers")
+                raise TypeError("must be an integer")
         print(sorted(self))
