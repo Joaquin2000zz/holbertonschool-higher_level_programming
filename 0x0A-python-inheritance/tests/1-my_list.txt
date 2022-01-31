@@ -1,0 +1,24 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList([-3, -2, -1])
+>>> my_list.print_sorted()
+[-3, -2, -1]
+>>> my_L = MyList([3, -2, -1])
+>>> my_L.print_sorted()
+[-2, -1, 3]
+>>> my = MyList([-1, 2, -3])
+>>> my.print_sorted()
+[-3, -1, 2]
+>>> wrongCase = MyList(5)
+Traceback (most recent call last):
+    ...
+TypeError: 'int' object is not iterable
+>>> wrongCase.print_sorted()
+Traceback (most recent call last):
+    ...
+NameError: name 'wrongCase' is not defined
+>>> wrongCase = MyList([])
+>>> wrongCase.print_sorted()
+[]
+>>> letterCase = MyList(['z', 'a', 'b'])
+>>> letterCase.print_sorted()
+['a', 'b', 'z']
