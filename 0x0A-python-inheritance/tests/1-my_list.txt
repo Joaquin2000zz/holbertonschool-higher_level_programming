@@ -21,4 +21,6 @@ NameError: name 'wrongCase' is not defined
 []
 >>> letterCase = MyList(['z', 'a', 'b'])
 >>> letterCase.print_sorted()
-['a', 'b', 'z']
+Traceback (most recent call last):
+    ...
+TypeError: must be an integer
