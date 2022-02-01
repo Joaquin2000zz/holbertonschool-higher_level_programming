@@ -23,8 +23,8 @@ class Student:
         ret = {}
         if type(attrs) is list:
             for key in attrs:
-                if key is not str:
-                    return self.__dict__
                 if key in self.__dict__:
                     ret[key] = self.__dict__[key]
+        if ret == {}:
+            return  self.__dict__
         return ret
