@@ -26,5 +26,5 @@ class Student:
                 if key in self.__dict__:
                     ret[key] = self.__dict__[key]
         if ret == {}:
-            return  self.__dict__
+            return self.__dict__
         return ret
