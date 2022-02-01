@@ -2,7 +2,6 @@
 """
 10-student module
 """
-import json
 
 
 class Student:
@@ -21,4 +20,4 @@ class Student:
         """
         retrieves a dictionary representation of a Student
         """
-        return json.dumps(self.__dict__)
+        return self.__dict__
