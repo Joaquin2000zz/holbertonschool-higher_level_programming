@@ -2,7 +2,6 @@
 """
 11-student module
 """
-import json as js
 
 
 class Student:
@@ -27,7 +26,7 @@ class Student:
         """
         replaces all attributes of the Student instance
         """
-        jsonObject = js.loads(json)
+ 
         for key in dict(self.__dict__):
             if key in jsonObject:
-                self.__dict__[key] = js.dumps(jsonObject[key])
+                self.__dict__[key] = json
