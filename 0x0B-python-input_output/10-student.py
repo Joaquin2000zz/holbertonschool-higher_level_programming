@@ -20,4 +20,9 @@ class Student:
         """
         retrieves a dictionary representation of a Student
         """
-        return self.__dict__
+        ret = {}
+        if type(attrs) is list:
+            for key in attrs:
+                if key in self.__dict__:
+                    ret[key] = self.__dict__[key]
+        return ret
