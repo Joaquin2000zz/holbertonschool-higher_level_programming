@@ -26,7 +26,7 @@ class Student:
         """
         replaces all attributes of the Student instance
         """
- 
+
         for key in dict(self.__dict__):
             if key in jsonObject:
                 self.__dict__[key] = json
