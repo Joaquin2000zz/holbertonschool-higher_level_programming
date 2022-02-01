@@ -25,6 +25,8 @@ class Student:
             for key in attrs:
                 if key in self.__dict__:
                     ret[key] = self.__dict__[key]
+        else:
+            return self.__dict__
         if ret == {}:
             return self.__dict__
         return ret
