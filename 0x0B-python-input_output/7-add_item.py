@@ -11,4 +11,3 @@ try:
     save_to_json_file(load + argv[1:], "add_item.json")
 except Exception as a:
     save_to_json_file(argv[1:], "add_item.json")
-
