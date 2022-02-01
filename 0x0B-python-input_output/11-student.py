@@ -20,7 +20,7 @@ class Student:
         """
         retrieves a dictionary representation of a Student
         """
-        return js.dumps(self.__dict__)
+        return self.__dict__
 
     def reload_from_json(self, json):
         """
@@ -28,5 +28,5 @@ class Student:
         """
 
         for key in dict(self.__dict__):
-            if key in jsonObject:
+            if key in json:
                 self.__dict__[key] = json
