@@ -11,6 +11,8 @@ def pascal_triangle(n):
     ret = []
     auxPrev = []
     aux = [1]
+    if n <= 0
+        return ret
     for i in range(0, n):
         if i == 0:
             ret.append(aux)
