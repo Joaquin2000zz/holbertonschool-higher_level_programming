@@ -1,0 +1,19 @@
+>>> from models.rectangle import Rectangle
+>>> Rectangle(10, "2")
+traceback (most recent call last):
+	...
+TypeError: height must be an integer
+>>> r = Rectangle(10, 2)
+>>> r.width = -10
+traceback (most recent call last):
+	...
+ValueError: width must be > 0
+>>> r = Rectangle(10, 2)
+>>> r.x = {}
+traceback (most recent call last):
+	...
+ValueError: x must be > 0
+>>> Rectangle(10, 2, 3, -1)
+traceback (most recent call last):
+        ...
+ValueError: y must be > 0

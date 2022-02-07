@@ -1,0 +1,21 @@
+>>> from models.rectangle import Rectangle
+>>> r1 = Rectangle(10, 10, 10, 10)
+>>> r1.update(id=89)
+>>> print(r1)
+[Rectangle] (89) 10/10 - 10/10
+>>> r1 = Rectangle(10, 10, 10, 10)
+>>> r1.update(id=89, width=2)
+>>> print(r1)
+[Rectangle] (89) 10/10 - 2/10
+>>> r1 = Rectangle(10, 10, 10, 10)
+>>> r1.update(id=89, width=2, height=3)
+>>> print(r1)
+[Rectangle] (89) 10/10 - 2/3
+>>> r1 = Rectangle(10, 10, 10, 10)
+>>> r1.update(id=89, width=2, height=3, x=4)
+>>> print(r1)
+[Rectangle] (89) 3/10 - 2/3
+>>> r1 = Rectangle(10, 10, 10, 10)
+>>> r1.update(id=89, width=2, height=3, x=4, y=5)
+>>> print(r1)
+[Rectangle] (89) 4/5 - 2/3
