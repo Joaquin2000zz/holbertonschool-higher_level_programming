@@ -3,7 +3,6 @@
 module doc
 """
 import json as js
-import os
 
 
 class Base:
@@ -35,14 +34,19 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
-        with open(cls.__name__ + ".json", "w", encoding="utf-8") as f:
-            if not list_objs:
-                f.write([])
-            else:
-                objList = []
-                for i in list_objs:
-                    objList.append(i.__dict__)
-                f.write(Base.to_json_string(objList))
+        filename = f"{cls.__name__}.json"
+        list_dict = []
+
+        if not list_objs:
+            pass
+        else:
+            for i in range(len(list_objs)):
+                list_dict.append(list_objs[i].to_dictionary())
+
+        lists = cls.to_json_string(list_dict)
+
+        with open(filename, 'w') as f:
+            f.write(lists)
 
     def from_json_string(json_string):
         """
@@ -62,13 +66,14 @@ class Base:
         """
         returns a list of instances
         """
-        if os.path.isfile(cls.__name__ + ".json") is False:
-            return []
-        ret = []
-        with open(cls.__name__ + ".json", 'r', encoding='utf-8') as f:
-            for line in f:
-                print("*********************************************")
-                print(Base.from_json_string(line))
-                print("*********************************************")
-                ret.append(Base.from_json_string(line))
-            return ret
+        filename = f"{cls.__name__}.json"
+        list_ins = []
+
+        try:
+            with open(filename, "r") as f:
+                instances = cls.from_json_string(f.read())
+            for i, dic in enumerate(instances):
+                list_ins.append(cls.create(**instances[i]))
+            return list_ins
+        except FileNotFoundError:
+            return list_ins
