@@ -10,3 +10,6 @@ if (argv[2]) {
     console.log('Not a number');
   }
 }
+else {
+  console.log('Not a number')
+}
