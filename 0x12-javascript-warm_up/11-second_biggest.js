@@ -7,7 +7,7 @@ if (!argv[3]) {
 } else {
   let bigger = 0;
   let second;
-  for (let i = 1; argv[i]; i++) {
+  for (let i = 2; argv[i]; i++) {
     if (bigger <= argv[i]) {
       second = bigger;
       bigger = parseInt(argv[i]);
