@@ -9,7 +9,6 @@ if (argv[2]) {
   } else {
     console.log('Not a number');
   }
-}
-else {
+} else {
   console.log('Not a number');
 }
