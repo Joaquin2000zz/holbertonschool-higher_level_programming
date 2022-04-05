@@ -11,9 +11,9 @@ class Rectangle {
     if (C !== 'C' || !C) {
       C = 'X';
     }
-      for (let i = 0; i < this.height; i++) {
-        console.log(C.repeat(this.width));
-      }
+    for (let i = 0; i < this.height; i++) {
+      console.log(C.repeat(this.width));
+    }
   }
 
   rotate () {
