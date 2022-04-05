@@ -8,7 +8,7 @@ class Rectangle {
   }
 
   print (C) {
-    if (C !== 'C' || undefined) {
+    if (undefined) {
       C = 'X';
     }
     for (let i = 0; i < this.height; i++) {
