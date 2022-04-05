@@ -7,10 +7,13 @@ class Rectangle {
     }
   }
 
-  print () {
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+  print (C) {
+    if (C !== 'C' || !C) {
+      C = 'X';
     }
+      for (let i = 0; i < this.height; i++) {
+        console.log(C.repeat(this.width));
+      }
   }
 
   rotate () {
