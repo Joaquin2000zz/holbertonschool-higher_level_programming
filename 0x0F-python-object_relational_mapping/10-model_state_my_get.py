@@ -6,7 +6,7 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
-    if (len(argv) == 5):
+    if (len(argv) == 4):
         engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
                                argv[2], argv[3]), pool_pre_ping=True)
         Base.metadata.create_all(engine)
@@ -19,3 +19,4 @@ if __name__ == "__main__":
                 print(item.id)
         else:
             print("Not found")
+        session.close()
