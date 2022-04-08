@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    query = session.query(State).filter_by(id='99991').all()
+    query = session.query(State).filter_by(id='1').all()
     if (len(query) > 0):
         for item in query:
             print(f'{item.id}: {item.name}')
