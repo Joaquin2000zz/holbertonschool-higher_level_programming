@@ -10,7 +10,8 @@ if (len(argv) > 3):
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
     # Print results in comma delimited format
-    cur.execute("SELECT * FROM states WHERE name LIKE '%{}%'".format(argv[4]))
+    cmd = "SELECT * FROM states WHERE name LIKE %s"
+    cur.execute(cmd, (argv[4], )
     rows = cur.fetchall()
     for row in rows:
         print(row)
