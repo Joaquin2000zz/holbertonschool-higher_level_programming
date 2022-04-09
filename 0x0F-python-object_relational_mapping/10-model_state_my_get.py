@@ -17,8 +17,7 @@ st/{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
 
         query = session.query(State).filter_by(name=argv[4]).first()
         if (query is not None):
-            for item in query:
-                print(item.id)
+            print(query.id)
         else:
             print("Not found")
         session.close()
