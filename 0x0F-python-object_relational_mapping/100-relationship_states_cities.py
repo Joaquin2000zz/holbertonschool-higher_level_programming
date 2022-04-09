@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+100 query module which use the relationship's modules
+"""
 from relationship_state import Base, State
 from relationship_city import City
 from sys import argv
