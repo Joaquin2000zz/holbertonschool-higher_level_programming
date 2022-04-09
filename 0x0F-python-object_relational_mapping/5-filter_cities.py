@@ -15,6 +15,8 @@ if __name__ == "__main__":
 cities.state_id = states.id WHERE states.name LIKE BINARY %s"
         cur.execute(cmd, (argv[4], ))
         rows = cur.fetchall()
+        if (rows is None):
+            return
         Len = len(rows)
         for i in range(Len):
             print(rows[i][0], end='')
