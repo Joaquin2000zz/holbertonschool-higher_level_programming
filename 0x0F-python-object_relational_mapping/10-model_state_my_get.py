@@ -16,7 +16,7 @@ st/{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
         session = Session(engine)
 
         query = session.query(State).filter_by(name=argv[4]).first()
-        if (len(query) > 0):
+        if (query is not None):
             for item in query:
                 print(item.id)
         else:
