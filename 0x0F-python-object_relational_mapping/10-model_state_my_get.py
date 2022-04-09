@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+ORM query which list the row of the state searched
+"""
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)

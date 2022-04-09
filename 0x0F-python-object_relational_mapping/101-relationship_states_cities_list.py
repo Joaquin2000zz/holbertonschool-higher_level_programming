@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+ORM query to show states with their corresponding cities using relationship
+"""
 from relationship_state import Base, State
 from relationship_city import City
 from sys import argv
@@ -21,7 +23,5 @@ if __name__ == "__main__":
             for City in State.cities:
                 print(f'    {City.id}: {City.name}')
         session.close()
-
-
         session.commit()
         session.close()

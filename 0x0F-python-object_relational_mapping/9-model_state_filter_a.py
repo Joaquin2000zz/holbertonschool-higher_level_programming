@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+ORM query which shows all the rows containing the a letter in the State.name
+"""
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)

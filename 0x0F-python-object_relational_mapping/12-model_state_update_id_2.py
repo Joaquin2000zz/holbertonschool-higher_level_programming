@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+update a row using ORM
+"""
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)

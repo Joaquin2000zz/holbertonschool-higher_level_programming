@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
+"""
+inserts a new state using ORM
+"""
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)
-from sqlalchemy import insert
 from sqlalchemy.orm import Session
 
 if __name__ == "__main__":

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+module which has a select * drom state maded for the ORM
+"""
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)

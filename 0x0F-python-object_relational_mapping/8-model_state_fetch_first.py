@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+module which select the first row of the State table with ORM
+"""
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)
