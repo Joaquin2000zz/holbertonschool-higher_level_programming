@@ -4,7 +4,6 @@ from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
-from sqlalchemy import update
 
 if __name__ == "__main__":
     if (len(argv) == 4):
@@ -15,7 +14,8 @@ if __name__ == "__main__":
 
         session = Session(engine)
 
-        upd = update(State).values({"name": "New Mexico"}).where(State.id == 2)
-        engine.execute(upd)
+        session.query(State).filter(State.id == 2).update({"name\
+": "New Mexico"})
+        session.commit()
 
         session.close()

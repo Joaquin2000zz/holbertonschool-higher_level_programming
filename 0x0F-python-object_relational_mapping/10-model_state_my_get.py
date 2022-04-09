@@ -7,13 +7,13 @@ from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
     if (len(argv) == 5):
-        engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
-                               argv[2], argv[3]), pool_pre_ping=True)
+        engine = create_engine('mysql+mysqldb://{}:{}@localho\
+st/{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
         Base.metadata.create_all(engine)
 
         session = Session(engine)
 
-        query = session.query(State).filter_by(name=argv[4]).all()
+        query = session.query(State).filter_by(name=argv[4]).first()
         if (len(query) > 0):
             for item in query:
                 print(item.id)
