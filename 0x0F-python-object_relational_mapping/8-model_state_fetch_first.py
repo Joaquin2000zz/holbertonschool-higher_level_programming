@@ -16,9 +16,8 @@ if __name__ == "__main__":
 
         session = Session(engine)
 
-        query = session.query(State).filter_by(id='1').all()
-        if (len(query) > 0):
-            for item in query:
-                print(f'{item.id}: {item.name}')
+        query = session.query(State).first()
+        if (query is not None):
+            print(f'{query.id}: {query.name}')
         else:
             print("Nothing")
