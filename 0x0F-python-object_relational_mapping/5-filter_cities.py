@@ -12,7 +12,7 @@ if __name__ == "__main__":
         cur = db.cursor()
         # Print results in comma delimited format
         cmd = "SELECT cities.name FROM cities INNER JOIN states ON \
-cities.state_id = states.id WHERE states.name LIKE %s"
+cities.state_id = states.id WHERE states.name LIKE BINARY %s"
         cur.execute(cmd, (argv[4], ))
         rows = cur.fetchall()
         Len = len(rows)
