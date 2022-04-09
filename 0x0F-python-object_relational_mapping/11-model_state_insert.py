@@ -22,7 +22,7 @@ if __name__ == "__main__":
         session.commit()
 
         query = session.query(State).filter_by(name="Louisiana").all()
-        if (len(query) > 0):
+        if (query is not None):
             for item in query:
                 print(item.id)
         else:
