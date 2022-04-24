@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
-from encodings import utf_8
-from multiprocessing.connection import wait
 import urllib.request
 from sys import argv
-import json
 
 """
 sendins a http request with the urllib library 
@@ -17,7 +14,6 @@ and prints the X-Request-Id unique Hash of each Response
 
 
 try:
-    #url = 
     with urllib.request.urlopen(argv[1]) as Response:
         for Tuple in Response.__dict__['headers'].__dict__['_headers']:
             if (Tuple[0] == 'X-Request-Id'):
