@@ -10,11 +10,11 @@ and prints the X-Request-Id unique Hash of each Response
 from sys import argv
 import urllib.request
 
-
-try:
-    with urllib.request.urlopen(argv[1]) as Response:
-        for Tuple in Response.__dict__['headers'].__dict__['_headers']:
-            if (Tuple[0] == 'X-Request-Id'):
-                print(Tuple[1])
-except Exception as e:
-    raise e
+if __name__ == "__main__":
+    try:
+        with urllib.request.urlopen(argv[1]) as Response:
+            for Tuple in Response.__dict__['headers'].__dict__['_headers']:
+                if (Tuple[0] == 'X-Request-Id'):
+                    print(Tuple[1])
+    except Exception as e:
+        raise e
