@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-
-import urllib.request
-from sys import argv
-
 """
 sendins a http request with the urllib library 
 and prints the X-Request-Id unique Hash of each Response
@@ -11,6 +7,9 @@ and prints the X-Request-Id unique Hash of each Response
 * of the value of the dictionary with key 'headers'
 * of the dictionary of an urlopen Response
 """
+
+from sys import argv
+import urllib.request
 
 
 try:
