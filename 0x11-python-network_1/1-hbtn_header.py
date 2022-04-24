@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """
-sendins a http request with the urllib library 
+sendins a http request with the urllib library
 and prints the X-Request-Id unique Hash of each Response
 * acceding into the tuple of the list of tuples
 * of the value of the dictionary with key '_headers'
 * of the value of the dictionary with key 'headers'
 * of the dictionary of an urlopen Response
 """
-
 from sys import argv
 import urllib.request
 

@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """
-sending a http request with the urllib library and printing.
+sending a http request with the urllib library and printing
 * response type (bytes)
 * raw information
 * decoded information
 """
-
-import urllib.request
 from encodings import utf_8
+import urllib.request
 
 
 with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
