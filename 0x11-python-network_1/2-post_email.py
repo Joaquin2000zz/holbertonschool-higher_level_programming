@@ -9,6 +9,7 @@ from sys import argv
 from urllib import parse
 from urllib import request
 
+
 if __name__ == "__main__":
     try:
         toParse = {'email': argv[2]}
@@ -17,4 +18,4 @@ if __name__ == "__main__":
         with request.urlopen(post) as response:
             print(response.read().decode('utf-8'))
     except Exception as e:
-        raise 
+        raise e
