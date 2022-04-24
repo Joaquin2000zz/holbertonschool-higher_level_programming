@@ -5,12 +5,11 @@ sending a http request with the urllib library and printing
 * raw information
 * decoded information
 """
-from encodings import utf_8
 import urllib.request
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        html = response.read()
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as res:
+        html = res.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))
         print("\t- content: {}".format(html))
