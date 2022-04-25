@@ -13,6 +13,9 @@ if __name__ == "__main__":
                       data=data)
     Rdict = r.json()
     if len(Rdict) == 2:
-        print("[{}] {}".format(Rdict['id'], Rdict['name']))
+        try:
+            print("[{}] {}".format(Rdict['id'], Rdict['name']))
+        except Exception as e:
+            print("Not a valid JSON")
     else:
         print("No result")
