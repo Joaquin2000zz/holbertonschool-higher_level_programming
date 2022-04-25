@@ -11,7 +11,7 @@ from sys import argv
 if __name__ == "__main__":
     if (len(argv) == 3):
         r = requests.get('https://api.github.com/user',
-                          auth=(argv[1], argv[2]))
+                         auth=(argv[1], argv[2]))
     try:
         print(r.json()['id'])
     except Exception as e:
