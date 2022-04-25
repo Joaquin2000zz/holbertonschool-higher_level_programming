@@ -4,7 +4,6 @@ requests is the module and is used even to post data without encoding
 module which shows request content
 """
 import requests
-from sys import argv
 
 
 if __name__ == "__main__":
