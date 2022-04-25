@@ -12,5 +12,4 @@ if __name__ == "__main__":
     print("Body response:")
     body = r.__dict__['_content'].decode()
     print("\t- type: {}".format(type(body)))
-    print("\t- content: {}".format(body))
-    
+    print("\t- content: {}".format(body))    
