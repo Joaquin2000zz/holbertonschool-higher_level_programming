@@ -6,6 +6,7 @@ print index content or error code if x.status_code greater than 399
 import requests
 from sys import argv
 
+
 if __name__ == "__main__":
     r = requests.get(argv[1])
     if (r.status_code < 399):
